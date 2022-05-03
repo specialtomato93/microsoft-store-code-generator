@@ -1,0 +1,40 @@
+body{
+    font-family: 'Segoe UI';
+    margin: 0;
+}
+div.header {
+    font-family:'Segoe UI';
+    display: flex;
+    align-items: center;
+    display: flex;
+    color:white;
+    background-color:rgb(0, 111, 201);
+}
+
+div.header > img {
+    margin-right: 10px;
+}
+
+.notice{
+    margin:15px;
+    color:red;
+    font-family:'Segoe UI';
+}
+
+button {
+
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    color: inherit;
+    font: inherit;
+    margin: 0px;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    cursor: pointer;
+    margin-left: 0px;
+}
+
+.other{
+    margin:15px;
+}
