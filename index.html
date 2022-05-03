@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="styles.css">
+<head>
+  <title>Microsoft Code Generator</title>
+</head>
+
+<body>
+<div class="header">
+<img src="store.png" height="64" width="64px"> 
+ <h2>Microsoft Store Code Generator</h2>
+</div>
+
+<div class="other">
+<p>Simply Press the button below to generate a random code that is the correct format for the Microsoft Store/Xbox.</p>
+</div>
+
+<div class="notice"><b>Please note that while this tool does generate codes in the correct format for the Microsoft Store/Xbox Store, there is absolutely no guarantee that these codes are actually valid. Think of it like a free lottery with unlimited spins. <br>(For the nerdy types, the actual chance of this working is 1 in 4.735x10^29)</b></div>
+
+
+  <script>
+    chars = 'BCDFGHJKMNPQRTVWXYZ2346789';
+
+    function generate() {
+      // Generate the code
+      code = '';
+      for (let i = 0; i < 25; i++) {
+        code += chars.charAt(Math.floor(Math.random() * 26));  // 26 is the length of `chars`
+      }
+      code = code.replace(/.{5}(?!$)/g, '$&-')  // Insert hyphens every 5 characters
+
+      // Display the code on screen
+      document.getElementById('code').innerText = code;
+    }
+  </script>
+
+
+<div class="other">
+  <h3><p id="code">XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</p></h3>
+  <button onclick="generate()">Generate Code!</button>
+</div>
+
+<footer>
+  <div class="other">
+  2022 specialtomato93 and ThatOtherAndrew.
+  View source code <a href="https://github.com/specialtomato93/microsoft-store-code-generator">here.</a>
+  </div>
+</footer>
+</body>
